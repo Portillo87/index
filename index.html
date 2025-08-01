@@ -2,102 +2,143 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuestros Servicios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuestros Servicios - Fundación Naturaleza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --verde-oscuro: #1c3f1f;
+      --verde: #2f5d2f;
+      --fondo-claro: #f8f8f5;
+      --blanco: #ffffff;
+      --gris: #6b6b6b;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Inter', sans-serif;
     }
 
     body {
-      background-color: #fffdf7;
-      color: #1c3f1f;
-      padding: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--fondo-claro);
+      color: var(--verde-oscuro);
+      padding: 1rem;
     }
 
-    .container {
-      max-width: 400px;
-      margin: 0 auto;
+    header {
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
 
-    h1 {
+    header h1 {
       font-size: 1.8rem;
-      text-align: center;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      color: var(--verde-oscuro);
     }
 
-    p.subtitle {
-      text-align: center;
+    header p {
       font-size: 1rem;
-      margin-bottom: 2rem;
-      color: #555;
+      color: var(--gris);
+      margin-top: 0.5rem;
     }
 
-    .card {
-      background-color: #f8f8f5;
+    .servicios {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .tarjeta {
+      background-color: var(--blanco);
       border-radius: 12px;
       padding: 1.2rem;
-      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .card i {
-      font-size: 2rem;
+    .tarjeta i {
+      font-size: 2.5rem;
+      color: var(--verde);
+      margin-bottom: 0.6rem;
+    }
+
+    .tarjeta h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
       margin-bottom: 0.5rem;
-      color: #2f5d2f;
     }
 
-    .card h2 {
-      font-size: 1.1rem;
-      margin-bottom: 0.8rem;
+    .tarjeta p {
+      font-size: 0.95rem;
+      color: var(--gris);
+      margin-bottom: 1rem;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background-color: #2f5d2f;
-      color: white;
+    .tarjeta a {
       text-decoration: none;
+      background-color: var(--verde);
+      color: white;
+      padding: 0.6rem 1.2rem;
       border-radius: 6px;
       font-size: 0.95rem;
+      transition: background-color 0.3s;
     }
 
-    /* Responsive: opcional para pantallas grandes */
+    .tarjeta a:hover {
+      background-color: #264d26;
+    }
+
     @media (min-width: 768px) {
-      .container {
-        max-width: 600px;
+      .servicios {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .tarjeta {
+        width: 48%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <header>
     <h1>Nuestros Servicios</h1>
-    <p class="subtitle">Conoce cómo protegemos la naturaleza</p>
+    <p>Promovemos la conservación y educación ambiental con acciones reales.</p>
+  </header>
 
-    <div class="card">
+  <section class="servicios">
+    <div class="tarjeta">
       <i>🌿</i>
-      <h2>Educación Ambiental</h2>
-      <a href="#" class="btn">Ver más</a>
+      <h2>Conservación de Ecosistemas</h2>
+      <p>Proyectos de protección y restauración de flora y fauna.</p>
+      <a href="#">Ver más</a>
     </div>
 
-    <div class="card">
+    <div class="tarjeta">
       <i>💧</i>
-      <h2>Conservación del Agua</h2>
-      <a href="#" class="btn">Ver más</a>
+      <h2>Gestión del Agua</h2>
+      <p>Promovemos el uso sostenible de los recursos hídricos.</p>
+      <a href="#">Ver más</a>
     </div>
 
-    <div class="card">
-      <i>🌳</i>
-      <h2>Reforestación</h2>
-      <a href="#" class="btn">Ver más</a>
+    <div class="tarjeta">
+      <i>📚</i>
+      <h2>Educación Ambiental</h2>
+      <p>Capacitamos comunidades para una conciencia ecológica.</p>
+      <a href="#">Ver más</a>
     </div>
-  </div>
+
+    <div class="tarjeta">
+      <i>🤝</i>
+      <h2>Proyectos Sociales</h2>
+      <p>Apoyo a iniciativas locales con impacto ambiental positivo.</p>
+      <a href="#">Ver más</a>
+    </div>
+  </section>
+
 </body>
 </html>
